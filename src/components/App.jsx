@@ -3,9 +3,11 @@ import { Statistics } from "./Statistics/Statistics";
 import { FriendList } from "./FriendList/FriendList";
 import { TransactionHistory } from "./TransactionHistory/TransactionHistory";
 import user from "./datas.json/user.json"
+import { AppStyled, Section } from "./App.styled";
 export const App = () => {
   return (
-    <div>
+    <AppStyled>
+    <Section>
      <Profile
   username={user.username}
   tag={user.tag}
@@ -13,10 +15,11 @@ export const App = () => {
   avatar={user.avatar}
   stats={user.stats}
 />
-<Statistics/>
-<FriendList/>
+</Section>
+<Section><Statistics/></Section>
+<Section><FriendList/></Section>
 <TransactionHistory/>
-    </div>
+</AppStyled>
     
   );
   
