@@ -5,4 +5,5 @@ export const AppStyled = styled.div`
      margin: 0 auto;
 ` 
 export const Section = styled.div`   
-margin-bottom: 20px;`
+margin-bottom: 20px;
+background-color: bisque;`

@@ -1,16 +1,17 @@
 import PropTypes from 'prop-types';
 import data from "../datas.json/data.json"
 import { StatisticsItem } from "./StatisticsItem"
+import { StatisticsTitle,StatisticsItemArea, StatisticsText } from './Statistics.styled';
 export const Statistics =({title})=>{
-    return <section class="statistics">
-    <h2 class="title">{title|| "Upload stats"}</h2>
+    return <>
+    <StatisticsTitle>{title|| "UPLOAD STATS"}</StatisticsTitle>
   
-    <ul class="stat-list">
-      {data.map(d=><li key={d.id}><StatisticsItem label={d.label}
+    <StatisticsItemArea>
+      {data.map(d=><StatisticsText key={d.id}><StatisticsItem label={d.label}
         percentage={d.percentage}
-      /> </li>)}
-    </ul>
-  </section>
+      /> </StatisticsText>)}
+    </StatisticsItemArea>
+  </>
 }
 Statistics.propTypes={
   title:PropTypes.string,

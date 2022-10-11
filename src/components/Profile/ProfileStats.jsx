@@ -1,9 +1,9 @@
 import PropTypes from 'prop-types';
-import { UserStatsItem } from './ProfileStats.styled';
+import { UserStatsItem, UserItemTitle, UserItemText } from './ProfileStats.styled';
 export const ProfileStats = ({item, children})=>{
     return<UserStatsItem>
-    <span>{children}</span> <br/>
-    <span>{item}</span>
+    <UserItemTitle>{children}</UserItemTitle> <br/>
+    <UserItemText>{item}</UserItemText>
     </UserStatsItem> 
 }
 

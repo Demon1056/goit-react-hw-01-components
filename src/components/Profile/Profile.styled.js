@@ -2,7 +2,7 @@
 import styled from 'styled-components';
 export const ProfileCard = styled.div`
 padding-top: 30px; 
-background-color: green;
+
 `
 
 export const ProfileImage = styled.img`

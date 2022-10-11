@@ -1,9 +1,10 @@
 import PropTypes from 'prop-types'
+import { FriendImage } from './Friend.styled'
 export const Friend = ({name, avatar, isOnline})=>{
     return<>
-    <span class="status">{isOnline}</span>
-    <img class="avatar" src={avatar} alt="User avatar" width="48" />
-    <p class="name">{name}</p>
+    <span>{isOnline}</span>
+    <FriendImage  src={avatar} alt="User avatar" width="48" />
+    <p>{name}</p>
   </>
 }
 Friend.propTypes={
