@@ -18,7 +18,7 @@ export const App = () => {
 </Section>
 <Section><Statistics/></Section>
 <Section><FriendList/></Section>
-<TransactionHistory/>
+<Section><TransactionHistory/></Section>
 </AppStyled>
     
   );

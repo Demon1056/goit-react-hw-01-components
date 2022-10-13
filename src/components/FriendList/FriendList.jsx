@@ -4,9 +4,8 @@ import { FriendSListStyle } from "./FriendList.styled";
 export const FriendList = ()=>{
     return <ul>
 {friends.map(friend=>
-<FriendSListStyle key={friend.id}>
+<FriendSListStyle key={friend.id} isOnline={friend.isOnline}>
 <Friend 
-isOnline={friend.isOnline}  
 avatar={friend.avatar}
 name={friend.name}    
 /></FriendSListStyle> )}

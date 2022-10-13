@@ -15,12 +15,12 @@ font-weight: bold;
     display: inline-block;
     width: 10px;
     height: 10px;
-    background-color: red;
+    background-color: ${(p)=>p.isOnline?'green':'red'
+    };
     margin-left: 15px;
     margin-right: 30px;
     border-radius: 50%;
 
-    ${(p)=>console.log (`1${p}`)
-    }
+   
 }
 `
