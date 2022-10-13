@@ -1,22 +1,23 @@
 import { Transaction } from "./Transaction";
 import transactions from "../datas.json/transactions.json"
+import { Table, TableTitles, TrTable } from './TransactionHistory.styled';
 export const TransactionHistory = ()=>{
-    return <table class="transaction-history"> 
-    <thead>
+    return <Table>
+    <TableTitles>
     <tr>
       <th>Type</th>
       <th>Amount</th>
       <th>Currency</th>
       </tr>
-  </thead>
+  </TableTitles>
 <tbody>
-{transactions.map(transaction=><tr key={transaction.id}>
+{transactions.map(transaction=><TrTable key={transaction.id}>
 <Transaction 
     type={transaction.type}
     amount={transaction.amount}
     currency={transaction.currency}
 />
-</tr>)}
+</TrTable>)}
   </tbody>
-</table>
+  </Table>
 }
