@@ -6,7 +6,7 @@ export const StatisticsItem = ({label, percentage})=> {
         <StatisticsPercentText>{percentage}%</StatisticsPercentText>
 </>
 }
-StatisticsItem.propTypes ={
+StatisticsItem.propTypes={
     label:PropTypes.string.isRequired,
-    percentage:PropTypes.number.isRequired,
+    percentage:PropTypes.number.isRequired
 }

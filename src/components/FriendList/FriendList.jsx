@@ -1,13 +1,17 @@
+import PropTypes from 'prop-types'
 import { Friend } from "./Friend";
-import friends from '../datas.json/friends.json'
 import { FriendSListStyle } from "./FriendList.styled";
-export const FriendList = ()=>{
+export const FriendList = ({friends})=>{
     return <ul>
-{friends.map(friend=>
-<FriendSListStyle key={friend.id} isOnline={friend.isOnline}>
-<Friend 
+{friends.map((friend)=><FriendSListStyle key={friend.id}>
+<Friend
+isOnline={friend.isOnline} 
 avatar={friend.avatar}
 name={friend.name}    
 /></FriendSListStyle> )}
   </ul>
+}
+
+FriendList.propTypes={
+  friends:PropTypes.arrayOf(PropTypes.object).isRequired
 }

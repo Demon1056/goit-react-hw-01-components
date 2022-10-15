@@ -1,10 +1,9 @@
 import PropTypes from 'prop-types';
-import data from "../datas.json/data.json"
 import { StatisticsItem } from "./StatisticsItem"
 import { StatisticsTitle,StatisticsItemArea, StatisticsText } from './Statistics.styled';
-export const Statistics =({title})=>{
+export const Statistics =({title, data})=>{
     return <>
-    <StatisticsTitle>{title|| "UPLOAD STATS"}</StatisticsTitle>
+    {title && <StatisticsTitle>{title}</StatisticsTitle>}
   
     <StatisticsItemArea>
       {data.map(d=><StatisticsText key={d.id}><StatisticsItem label={d.label}
@@ -15,4 +14,5 @@ export const Statistics =({title})=>{
 }
 Statistics.propTypes={
   title:PropTypes.string,
+  data:PropTypes.arrayOf(PropTypes.object).isRequired
 }

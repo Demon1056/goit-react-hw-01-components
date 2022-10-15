@@ -15,12 +15,10 @@ font-weight: bold;
     display: inline-block;
     width: 10px;
     height: 10px;
-    background-color: ${(p)=>p.isOnline?'green':'red'
+    background-color: ${(p)=>p.children.props.isOnline?'green':'red'
     };
     margin-left: 15px;
     margin-right: 30px;
     border-radius: 50%;
-
-   
 }
 `
